@@ -15,8 +15,8 @@ const Progressbar = ({ file, setFile, patientName, setPatientName, age, setAge, 
   }, [url, setFile, setPatientName, setAge, setContact ]);
 
   return (
-      <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
-        <div className="bg-blue-600 h-2.5 rounded-full" style={{ width: `${progress}%` }}></div>
+      <div className="w-full bg-gray-200 rounded-full h-1 dark:bg-blue-200">
+        <div className="bg-blue-600 h-full rounded-full" style={{ width: `${progress}%` }}></div>
       </div>
   );
 };

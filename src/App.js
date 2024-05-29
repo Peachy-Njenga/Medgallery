@@ -9,7 +9,7 @@ function App() {
   const[selectedPhoto, setSelectedPhoto] = useState(null)
 
   return (
-    <div className="px-10 ">
+    <div className=" ">
     < Header />
     <Uploadform />
     <ImageGrid setSelectedPhoto={setSelectedPhoto}/>

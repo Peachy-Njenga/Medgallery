@@ -2,10 +2,10 @@ import React from 'react'
 
 const Header = () => {
   return (
-    <div>
-      <p className='text-4xl font-bold'>Medgallery</p>
-      <h1 className='text-center'>Your Pictures</h1>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisic  </p>
+    <div className=' p-3'>
+      <p className='text-4xl text-center md:text-start font-bold italic'>Medgallery</p>
+      {/* <p>Lorem ipsum dolor sit amet consectetur, adipisic  </p> */}
+
     </div>
   )
 }
