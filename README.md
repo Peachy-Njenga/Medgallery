@@ -1,70 +1,85 @@
-# Getting Started with Create React App
+# MedGallery
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+MedGallery is a React application designed to manage and display patient information alongside their corresponding images. This application provides a user-friendly interface for healthcare professionals to upload patient images along with their relevant data, facilitating efficient organization and accessibility of medical records.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Gallery Display**: View uploaded patient images in a gallery format for easy browsing.
+- **Patient Information**: Display patient information alongside their respective images.
+- **Image Upload**: Upload images of patients directly into the application.
+- **User Authentication**: Utilizes Auth0 for secure user authentication.
 
-### `npm start`
+## Setup
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Follow these steps to set up the MedGallery repository from scratch:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Prerequisites
 
-### `npm test`
+Make sure you have the following installed on your system:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Node.js and npm (Node Package Manager)
+- Git
 
-### `npm run build`
+### Clone the Repository
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+https://github.com/Peachy-Njenga/Medgallery.git
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Navigate to the Project Directory
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+cd Medgallery
+```
 
-### `npm run eject`
+### Install Dependencies
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+npm install
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Configuration
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. **Auth0 Configuration**: Set up an account on Auth0 (https://auth0.com/) if you haven't already. Create a new application and note down the client ID and domain.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2. Create a `.env` file in the root directory of the project and add the following variables:
 
-## Learn More
+   ```plaintext
+    REACT_APP_API_KEY=your-api-key
+    REACT_APP_AUTH_DOMAIN=your-auth-domain
+    REACT_APP_PROJECT_ID=your-project-id
+    REACT_APP_STORAGE_BUCKET=your-storage-bucket
+    REACT_APP_MESSAGING_SENDER_ID=your-messaging-sender-id
+    REACT_APP_APP_ID=your-app-id
+    REACT_APP_AUTH0_DOMAIN=your-auth0-domain
+    REACT_APP_AUTH0_CLIENT_ID=your-auth0-client-id
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Running the Application
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm start
+```
 
-### Code Splitting
+The application should now be running on `http://localhost:3000`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Usage
 
-### Analyzing the Bundle Size
+1. **Authentication**: Users will need to sign in using their Auth0 credentials.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+2. **Uploading Images**: Navigate to the upload section to upload patient images. Ensure you provide the necessary patient information along with the image.
 
-### Making a Progressive Web App
+3. **Viewing Gallery**: Browse through the gallery to view uploaded patient images. Clicking on an image should display the corresponding patient information.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Contributing
 
-### Advanced Configuration
+Contributions are welcome! Please follow the standard guidelines for contributing to open source projects.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## License
 
-### Deployment
+This project is licensed under the [MIT License](LICENSE).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Acknowledgements
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Auth0 for providing secure authentication services.
+- React community for the wonderful framework.

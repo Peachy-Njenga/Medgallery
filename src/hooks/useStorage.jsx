@@ -12,7 +12,7 @@ import {
 } from "firebase/firestore";
 import { projectStorage, projectFirestore } from "../firebase/config";
 
-const useStorage = (file) => {
+const useStorage = (file, patientName, age, contact) => {
   const [progress, setProgress] = useState(0);
   const [error, setError] = useState(null);
   const [url, setUrl] = useState(null);
@@ -46,7 +46,9 @@ const useStorage = (file) => {
           const docRef = await addDoc(collectionRef, {
             url: downloadURL,
             createdAt: serverTimestamp(),
-            
+            patientName: patientName,
+            age: age,
+            contact: contact,
           });
           // Update state
           setUrl(downloadURL);

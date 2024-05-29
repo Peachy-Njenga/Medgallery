@@ -2,14 +2,17 @@ import React, { useEffect } from "react";
 import useStorage from "../hooks/useStorage";
 // import { projectStorage } from "../firebase/config";
 
-const Progressbar = ({ file, setFile}) => {
-  const { url, progress } = useStorage(file);
+const Progressbar = ({ file, setFile, patientName, setPatientName, age, setAge, contact, setContact }) => {
+  const { url, progress } = useStorage(file, patientName, age, contact);
 
   useEffect(() => {
     if (url) {
       setFile(null);
+      setPatientName("");
+      setAge("");
+      setContact("");
     }
-  }, [url, setFile]);
+  }, [url, setFile, setPatientName, setAge, setContact ]);
 
   return (
       <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
