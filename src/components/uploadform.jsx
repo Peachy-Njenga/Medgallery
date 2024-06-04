@@ -13,7 +13,7 @@ import { IoClose } from "react-icons/io5";
 import { PiUploadSimple } from "react-icons/pi";
 
 const Uploadform = () => {
-  const [file, setFile] = useState(null);
+  const [file, setFile] = useState("");
   const [fileError, setFileError] = useState(null);
   const [patientName, setPatientName] = useState("");
   const [age, setAge] = useState("");
@@ -22,15 +22,15 @@ const Uploadform = () => {
 
   const types = ["image/png", "image/jpeg"];
 
-  const handleFileOnSubmit = (e) => {
-    e.preventDefault();
-    let selected = e.target.children[1].children[0].files[0];
+  const handleFileOnChange = () => {
+    // e.preventDefault();
+    // let selected = e.target.children[1].children[0].files[0];
 
-    if (selected && types.includes(selected.type)) {
-      setFile(selected);
+    if (file && types.includes(file.type)) {
+      setFile(file);
       setFileError("");
     } else {
-      setFile(null);
+      setFile("");
       setFileError("Please select an image file(jpeg or png)");
     }
   };
@@ -70,7 +70,7 @@ const Uploadform = () => {
             </TEModalHeader>
             <TEModalBody>
               <form
-                onSubmit={(e) => handleFileOnSubmit(e)}
+                // onSubmit={(e) => handleFileOnChange(e)}
                 className="max-w-md mx-auto flex flex-col gap-3"
               >
                 <div>
@@ -89,7 +89,11 @@ const Uploadform = () => {
                   )}
                 </div>
                 <div>
-                  <input type="file" />
+                  <input
+                    type="file"
+                    value={file}
+                    onChange={(e) => handleFileOnChange()}
+                  />
                 </div>
                 <div className="relative z-0 w-full mb-5 group">
                   <input

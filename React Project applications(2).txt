@@ -1,0 +1,51 @@
+These React Project applications cover concepts learnt about, particularly components and states, to create your application. You are required to choose one project and work on it as a team. Feel free to integrate any that complement each other
+
+1. Photo Gallery App
+Application: Patient picture files
+Summary:
+You will build a photo gallery app where users can upload a new file that is stored in the Firebase Realtime database and view a list of uploaded files in a grid format. Users can click on any image to view it as a popup along with animations added to all the transitions.
+
+Topics covered:
+React Hooks, components, props, useState(), handling form File input in React. Firebase basics like setting up, storage hook, snapshot, etc. JavaScript async wait, API. CSS styles with grid and flexbox.
+
+2. React Notes App
+Application: Doctors Notes
+Summary:
+You will build a notes app where users can enter text to each note and save it in local storage, delete an existing note, dynamically search among the notes and add character limit.
+
+Topics covered:
+React Hooks, components, props, useState(), useffect(), handling HTML input in React. CSS styles with Grid and flexbox. Local storage API.
+
+3. Simple Contact List
+Application: Patient list
+Summary:
+You will build a contact list app that fetches the list of all users from API and renders each user’s details on a component with “show age” button which displays the age on click.
+
+Topics covered:
+React Hooks, components, props, useState(), useEffect(). Fetch API, JS Promises, and callback.
+
+4. Todo List
+Application: Tasks for patient visit
+It is a very common app which most React developers can build, demonstrates basic knowledge of React.
+
+Summary:
+You will build a simple to-do app where users can add different types of notes. In addition, users can approve or delete notes from the list.
+
+Topics Covered:
+React basics such as components, state, props. React Hooks lifecycle ie useEffect() and using controlled HTML form in React.
+
+5. User Login app using Auth0
+Summary:
+You will simple authentication app where users can log in using Auth0 and view the user data with an option to log out.
+
+Topics covered:
+React basics like Hooks, components, props, useState().
+
+6. React Quiz App
+Application: Patient Assessment
+
+Summary:
+You will build a simple React assessment app where users can click on option buttons to answer questions, next question rendered each time option is selected and at the end, the final score is displayed.
+
+Topics covered:
+React Hooks, components, props, useState().

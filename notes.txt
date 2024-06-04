@@ -1,0 +1,11 @@
+favicon -- pin
+:) card-shadow and hover 
+skeleton
+patient detail on clicking an image
+edit info
+delete patient 
+make header sticky
+
+authentication
+
+
