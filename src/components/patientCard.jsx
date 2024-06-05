@@ -1,36 +1,49 @@
-import React from "react";
-import Skeleton from '@mui/material/Skeleton';
+import React, {useState } from "react";
+import Skeleton from "@mui/material/Skeleton";
+// Initialization for ES Users
 
 const PatientCard = ({ patient, setSelectedPhoto, loading }) => {
   const { url, patientName, contact, age } = patient;
 
+  const handleEdit = () => {
+    console.log("edit")
+  }
+
+  const handleDelete = () => {
+    console.log("delete")
+  }
+
   return (
     <div>
       {url && (
-        <div className="border p-2 rounded-md " >
+        <div className="border p-2 rounded-md ">
           <img
             src={url}
             alt={patientName}
             className="h-52 max-w-full  w-48 md:w-72 rounded-lg object-cover "
             onClick={() => setSelectedPhoto(url)}
           />
-          <div className="flex flex-col ">
-            <span className="text-xl font">{patientName}</span>
-            <span className="text-sm">{contact}</span>
-            <span className="text-sm">{age}</span>
+          <div className="flex flex-row">
+            <div className="flex flex-col ">
+              <div>
+                <span className="text-sm text-gray-500">Name: </span>
+                <span className="text-xl font">{patientName}</span>
+              </div>
+              <div>
+                <span className="text-sm text-gray-500">Contact: </span>
+                <span>{contact}</span>
+              </div>
+              <div>
+                <span className="text-sm text-gray-500">Age: </span>
+                <span>{age}</span>
+              </div>
+            </div>
+            <div className="flex flex-col items-end">
+              <button>opt</button>
+            </div>
           </div>
         </div>
-      ) }
-        {/* <div className="border p-2 rounded-md " >
-          <Skeleton sx={{ height: 190 }} animation="wave" variant="rectangular" />
-          <div className="flex flex-col ">
-          <React.Fragment>
-            <Skeleton animation="wave" height={10} style={{ marginBottom: 6 }} />
-            <Skeleton animation="wave" height={10} width="80%" />
-          </React.Fragment>
-          </div>
-        </div>  */}
-
+      )}
     </div>
   );
 };
