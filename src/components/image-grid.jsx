@@ -2,8 +2,8 @@ import React from "react";
 import useFireStore from "../hooks/useFireStore";
 import PatientCard from "./patientCard";
 
-const ImageGrid = ({ setSelectedPhoto }) => {
-  const { docs, loading } = useFireStore("images");
+const ImageGrid = ({ setSelectedPatient }) => {
+  const { docs } = useFireStore("images");
 
   return (
     <div className="px-3 md:px-32 flex justify-center ">
@@ -13,8 +13,7 @@ const ImageGrid = ({ setSelectedPhoto }) => {
             <PatientCard
               patient={doc}
               key={doc.id}
-              setSelectedPhoto={setSelectedPhoto}
-              loading={loading}
+              setSelectedPatient={setSelectedPatient}
             />
           ))}
       </div>

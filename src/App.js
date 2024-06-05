@@ -6,14 +6,14 @@ import PictureModal from "./components/pictureModal";
 
 
 function App() {
-  const[selectedPhoto, setSelectedPhoto] = useState(null)
+  const[selectedPatient, setSelectedPatient] = useState(null)
 
   return (
     <div className=" ">
     < Header />
     <Uploadform />
-    <ImageGrid setSelectedPhoto={setSelectedPhoto}/>
-    { selectedPhoto && <PictureModal selectedPhoto={selectedPhoto} setSelectedPhoto={setSelectedPhoto} />}
+    <ImageGrid setSelectedPatient={setSelectedPatient}/>
+    { selectedPatient && <PictureModal selectedPatient={selectedPatient} setSelectedPatient={setSelectedPatient} />}
     </div>
   );
 }

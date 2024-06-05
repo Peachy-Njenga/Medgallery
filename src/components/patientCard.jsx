@@ -2,7 +2,7 @@ import React, {useState } from "react";
 import Skeleton from "@mui/material/Skeleton";
 // Initialization for ES Users
 
-const PatientCard = ({ patient, setSelectedPhoto, loading }) => {
+const PatientCard = ({ patient, setSelectedPatient, loading }) => {
   const { url, patientName, contact, age } = patient;
 
   const handleEdit = () => {
@@ -21,7 +21,7 @@ const PatientCard = ({ patient, setSelectedPhoto, loading }) => {
             src={url}
             alt={patientName}
             className="h-52 max-w-full  w-48 md:w-72 rounded-lg object-cover "
-            onClick={() => setSelectedPhoto(url)}
+            onClick={() => setSelectedPatient(patient)}
           />
           <div className="flex flex-row">
             <div className="flex flex-col ">

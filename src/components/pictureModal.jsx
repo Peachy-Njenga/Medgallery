@@ -1,31 +1,34 @@
 import React, { useEffect, useState } from "react";
 import { IoClose } from "react-icons/io5";
 
-const PictureModal = ({ selectedPhoto, setSelectedPhoto }) => {
+const PictureModal = ({ selectedPatient, setSelectedPatient }) => {
   const [showModal, setShowModal] = useState(false);
+  const { url, patientName, contact, age } = selectedPatient;
 
   useEffect(() => {
-    setShowModal(!!selectedPhoto);
-  }, [selectedPhoto]);
+    setShowModal(!!selectedPatient);
+  }, [selectedPatient]);
 
-  const handleClosePhotoModal = (e) => {
+  const handleClosePatientModal = (e) => {
     if (e.target === e.currentTarget) {
       setShowModal(false);
-      setTimeout(() => setSelectedPhoto(null), 300); // match the transition duration
+      setTimeout(() => setSelectedPatient(null), 300); // match the transition duration
     }
   };
 
   const handleCloseModal = () => {
     setShowModal(false);
-    setTimeout(() => setSelectedPhoto(null), 300); // match the transition duration
+    setTimeout(() => setSelectedPatient(null), 300); // match the transition duration
   };
 
   return (
     <div
       className={`fixed inset-0 z-50 flex w-screen h-screen justify-center p-16 ${
-        showModal ? "bg-gray-700 bg-opacity-50 transition-opacity duration-300" : "opacity-0"
+        showModal
+          ? "bg-gray-700 bg-opacity-50 transition-opacity duration-300"
+          : "opacity-0"
       }`}
-      onClick={handleClosePhotoModal}
+      onClick={handleClosePatientModal}
       style={{ transition: "opacity 0.3s" }}
     >
       <div
@@ -33,14 +36,11 @@ const PictureModal = ({ selectedPhoto, setSelectedPhoto }) => {
           showModal ? "translate-y-0" : "translate-y-full"
         }`}
       >
-        <button
-          className="absolute top-2 right-2"
-          onClick={handleCloseModal}
-        >
+        <button className="absolute top-2 right-2" onClick={handleCloseModal}>
           <IoClose />
         </button>
         <img
-          src={selectedPhoto}
+          src={url}
           alt="Patient Image"
           className="rounded object-cover h-full w-full"
         />
